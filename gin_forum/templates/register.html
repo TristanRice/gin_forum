@@ -1,0 +1,31 @@
+<!--register.html-->
+
+{{ template "header.html" . }}
+
+<div class="container">
+    {{if .error}}
+        <div style="text-align: center;" class="alert alert-danger">{{.error}}</div>
+    {{end}}
+    <div class="login">
+        <form action="" method="post" onsubmit="veriy( )">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Username" id="uname" name="username">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="email" id="email" name="email">
+            <label for="password_1"><b>Password</b></label>
+            <input type="password" placeholder="Enter password" id="password_1" name="password_1">
+            <label for="password_2"><b>Please enter your password again</b></label>
+            <input type="password" placeholder="Enter password agian" id="password_2" name="password_2">
+
+            <button style="margin-bottom: 10px;" type="submit" name="loginSubmit">Login</button>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function verify( ) {
+            if ($("#password_1").val( )!==$("#password_2").val( )) {
+                alert("Passwords are not the same");
+                return false;
+            }
+        }
+    </script>
+</div>

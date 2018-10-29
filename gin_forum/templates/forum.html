@@ -1,0 +1,15 @@
+<!--forum.html-->
+
+{{template "header.html"}}
+{{template "page-top.html"}}
+{{range .posts}}
+	<div>
+		<div>
+			{{.title}}
+		</div>
+		<div>
+			{{.content}}
+		</div>
+	</div>
+{{end}}
+{{template "footer.html"}}
